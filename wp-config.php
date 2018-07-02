@@ -23,10 +23,10 @@
 define('DB_NAME', 'realfanwp');
 
 /** Usuário do banco de dados MySQL */
-define('DB_USER', 'root');
+define('DB_USER', 'realfanadmin');
 
 /** Senha do banco de dados MySQL */
-define('DB_PASSWORD', 'admin');
+define('DB_PASSWORD', 'Oshirofamily1@');
 
 /** Nome do host do MySQL */
 define('DB_HOST', 'localhost');
