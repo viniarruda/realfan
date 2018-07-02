@@ -65,7 +65,7 @@
     </section>
     <section class="contact" id="contact">
         <h1 class="contact_title">Contato</h1>
-        <?= do_shortcode( '[contact-form-7 id="14" title="Contact form 1"]' ); ?>
+        <?= do_shortcode( '[contact-form-7 id="5" title="Formulário de contato"]' ); ?>
 
     </section>
 
