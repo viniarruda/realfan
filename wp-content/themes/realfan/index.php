@@ -13,6 +13,7 @@
         <div class="services_list">
             <div class="services_card">
                 <div class="services_card-front">
+                    <i class="fas fa-code"></i>
                     <h2>Seu site</h2>
                 </div>
                 <div class="services_card-back">

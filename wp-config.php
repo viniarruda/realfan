@@ -84,8 +84,6 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', false);
 
-define('FORCE_SSL_ADMIN', true);
-
 /* Isto é tudo, pode parar de editar! :) */
 
 /** Caminho absoluto para o diretório WordPress. */
