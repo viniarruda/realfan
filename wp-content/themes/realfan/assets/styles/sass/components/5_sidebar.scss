@@ -1,0 +1,59 @@
+.sidebar {
+  flex-basis: 30%;
+
+  @include breakpoint(md) {
+    display: none
+  }
+
+  &_widget {
+
+  }
+
+  &_widget-title {
+    padding: 15px 0;
+    background-color: color(primary, dark);
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  &_widget-content {
+    padding: 20px;
+    background: color(neutral, base);
+  }
+}
+
+/* ---------------------
+  CATEGORIES WIDGET
+---------------------- */
+
+.parent-categorie {
+  cursor: pointer;
+  display: block;
+  margin: 0 0 15px;
+  color: color(colored, blue);
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: size(medium);
+
+    &.--active {
+      color: color(neutral, dark)
+    }
+}
+
+.children-categories {
+  display: none;
+  margin: 0px 0 20px;
+
+    &_item {
+      @extend .featured-post_pill;
+      display: inline-block;
+      font-size: size(smaller);
+      padding: 2px 15px;
+      margin: 5px;
+
+        a {display: block; height: 100%; color: white}
+    }
+}

@@ -1,0 +1,66 @@
+/* -------------------------
+  GRID VALUES
+--------------------------*/
+$grid-columns: 12;
+$grid-gutter: 2.5%;
+$gutter: 30px;
+$sidebar-space:50px;
+
+/* -------------------------
+  IMAGES PATH
+--------------------------*/
+$imgPath : "../images/";
+
+/* -------------------------
+  COLORS
+--------------------------*/
+@function color($color-name, $color-variant) {
+  @return map-get(map-get($colors, $color-name), $color-variant);
+}
+
+$colors:(
+  primary: (
+    dark: #73e9eb,
+    base: #0098da,
+    light: #4c6e53,
+    lighter: #fffdf7,
+  ),
+
+  neutral: (
+    darkest: #4b4b4b,
+    dark: #8e8e8e,
+    base: #f1f1f1,
+    light: #fdfdfd,
+    lighter: #f4f4f4
+  ),
+
+  colored: (
+    red: #cf0000,
+    yellow: #feee00,
+    blue: #003166,
+    blue-hover: #205ea0,
+    brown: #382f2d
+  )
+);
+
+/* -------------------------
+  SIZES
+--------------------------*/
+@function size($key) {
+  @return map-get($sizes, $key);
+}
+
+$sizes: (
+  default: 16px,
+  smaller: 12px,
+  small: 14px,
+  medium: 18px,
+  big: 24px,
+  bigger: 30px,
+  biggest: 48px
+);
+
+/* -------------------------
+  FONTS
+--------------------------*/
+$primary-font: 'Lato', sans-serif;

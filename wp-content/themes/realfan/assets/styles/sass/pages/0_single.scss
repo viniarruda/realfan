@@ -1,0 +1,129 @@
+#single {
+  display: flex;
+  flex-wrap: wrap;
+  margin: $gutter auto
+}
+
+.post {
+  flex-basis: 65%;
+  text-align: justify;
+
+    @include breakpoint(md) {
+      flex-basis: 100%
+    }
+
+    &_head {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 0 15px 0;
+      padding: 0 0 15px 0;
+      border-bottom: 1px solid color(neutral, dark);
+
+      .share {
+        flex-basis:60%;
+        text-align: right;
+
+        @include breakpoint(sm) {
+          flex-basis: 100%;
+          text-align: left
+        }
+      }
+    }
+
+    &_head-time {
+      flex-basis: 40%;
+      color: color(neutral, dark);
+
+      @include breakpoint(xs) {
+        flex-basis: 100%
+      }
+    }
+
+    > .share {
+      margin: $gutter 0
+    }
+
+    &_content {
+      ol {
+        list-style: decimal;
+      }
+
+      ul {
+        list-style: initial;
+      }
+
+      ol, ul {
+        padding: 0 0 20px 20px
+      }
+    }
+
+    &_actions {
+      display: flex;
+      flex-flow: row wrap;
+      .liked {
+        text-align: right;
+        width: 100%;
+        color: #4f4f4f;
+        line-height: 1.41;
+        letter-spacing: 0.4px;
+        font-weight: bold;
+
+        @include breakpoint(sm) {
+          order: 1;
+          text-align: left;
+        }
+      }
+      .share {
+        margin: 0;
+        width: 50%;
+        @include breakpoint(sm) {
+          order: 3;
+          width: 100%;
+        }
+      }
+      .rating {
+        text-align: right;
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        width: 50%;
+        justify-content: flex-end;
+        @include breakpoint(sm) {
+          order: 2;
+          width: 100%;
+          margin: 15px 0;
+        }
+        span {
+          margin: 0 10px 0 0;
+        }
+        .post-ratings {
+          width: auto!important;
+          margin: 0!important;
+        }
+      }
+    }
+}
+
+.comments > div > div {
+  padding: $gutter;
+  background: color(neutral, base);
+}
+
+.note-box {
+  border: 2px solid #41675E;
+  padding: 10px;
+  font-size: 16px;
+  margin: 5px 10px;
+  color: #4B4B4B;
+  font-weight: bold;
+  width: 30%;
+  float: right;
+  a {
+    color: #0056b3;
+    text-decoration: underline;
+    &:hover {
+      color: #007bff;
+    }
+  }
+}
+

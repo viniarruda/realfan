@@ -1,0 +1,25 @@
+.blog {
+  padding: 40px;
+  text-align: center;
+  overflow: hidden;
+  &_title {
+    text-transform: uppercase;
+  }
+  &-list {
+    margin: 40px 0;
+  }
+  .view-more {
+    border: 1px solid color(primary, base);
+    color: color(primary, base );
+    border-radius: 50px;
+    float: right;
+    padding: 10px 15px;
+    font-weight: bold;
+    margin: 0 30px 0 0;
+    &:hover {
+      background-color: color(primary, base);
+      border: 1px solid color(primary, base);
+      color: white;
+    }
+  }
+}

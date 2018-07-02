@@ -1,0 +1,117 @@
+/* ---------------------
+  PLACEHOLDER
+---------------------- */
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+/* ---------------------
+  CLEARFIX
+---------------------- */
+@mixin clearfix {
+	&:before,
+	&:after {
+		content:"";
+		clear:both;
+		width:100%;
+		height:0px;
+		display:block;
+	}
+}
+
+/* ---------------------
+  TRANSITION
+---------------------- */
+@mixin transition($duration, $type) {
+  -webkit-transition: all $duration $type;
+  -moz-transition: all $duration $type;
+  -ms-transition: all $duration $type;
+  -o-transition: all $duration $type;
+  transition: all $duration $type;
+}
+
+/* ---------------------
+  PREFIXING
+---------------------- */
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+      @if $vendors {
+        @each $vendor in $vendors {
+          #{"-" + $vendor + "-" + $property}: #{$value};
+        }
+      }
+      #{$property}: #{$value};
+}
+
+/* ---------------------
+  BORDER RADIUS
+---------------------- */
+@mixin border-radius($top-left, $top-right, $bottom-left, $bottom-right) {
+  border-top-left-radius: $top-left;
+  border-top-right-radius: $top-right;
+  border-bottom-left-radius: $bottom-left;
+  border-bottom-right-radius: $bottom-right;
+}
+
+/* ---------------------
+  CENTER
+---------------------- */
+@mixin centralize {
+  position:absolute;
+  top:50%;
+  @include prefix(transform, translateY(-50%), webkit moz ms o)
+}
+
+/* ---------------------
+  QUERIES
+---------------------- */
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media screen and (max-width: 320px) { @content; }
+  }
+
+  @if $class == sm {
+    @media screen and (max-width: 600px) { @content; }
+  }
+
+  @if $class == md {
+    @media screen and (max-width: 900px) { @content; }
+  }
+
+  @if $class == lg {
+    @media screen and (max-width: 1200px) { @content; }
+  }
+
+  @if $class == xl {
+    @media screen and (max-width: 1800px) { @content; }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}
+
+// center vertically and/or horizontally an absolute positioned element
+
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    @include transform(translateX(-50%) translateY(-50%));
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    @include transform(translateX(-50%));
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    @include transform(translateY(-50%));
+  }
+}

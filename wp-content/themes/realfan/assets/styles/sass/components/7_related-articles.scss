@@ -1,0 +1,10 @@
+.related-articles {
+
+    &_title {
+      margin: 0 0 $gutter $grid-gutter;
+      font-size: size(big);
+      line-height: size(big);
+      font-weight: bold;
+      color: color(neutral, darkest)
+    }
+}

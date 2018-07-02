@@ -1,0 +1,73 @@
+.search {
+  position: relative;
+  min-width: 70px;
+
+    @include breakpoint(md) {
+      margin: 20px 0 0;
+    }
+
+    &_toggle {
+      position: absolute;
+      cursor: pointer;
+      float: right;
+      right: 15px;
+      top: 15px;
+      padding: 0 0 0 30px;
+      border-left: 1px solid white;
+
+        @include breakpoint(md) {
+          display: none
+        }
+    }
+
+    form {
+      position: relative;
+      opacity: 0;
+      float: left;
+      width: 0px;
+      margin:10px 100px 0 0;
+      overflow: hidden;
+      @include transition(300ms, ease);
+
+      &.--active {
+        width: 250px;
+        opacity: 1;
+      }
+
+      @include breakpoint(md) {
+        position: relative;
+        top: inherit;
+        left: inherit;
+        width: 100%;
+        opacity: 1;
+        margin: 0 auto;
+      }
+    }
+
+    input {
+
+      @include breakpoint(md) {
+        margin: 0;
+        border-radius: 0;
+        background: url('../images/icon-search.png') center right no-repeat #2a4c44;
+        background-position-x: 95%;
+
+          @include placeholder {
+            color: white;
+          }
+      }
+    }
+
+    button {
+      opacity: 0;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: color(neutral, base);
+
+        &.--active {
+          opacity: 1
+        }
+    }
+}

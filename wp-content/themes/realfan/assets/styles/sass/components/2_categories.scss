@@ -1,0 +1,125 @@
+.categories {
+  padding: $gutter * 1.5;
+  background: color(neutral, base);
+  text-align: center;
+  font-weight: 600;
+  font-size: size(big);
+
+    @include breakpoint(md) {
+      font-size: size(small);
+      padding: ($gutter * 1.5) 20px;
+    }
+
+    &_label {
+      display: inline-block;
+      margin: 0
+    }
+
+    &_list {
+      padding-right: 10px;
+      position: relative;
+      display: inline-block;
+
+      @include breakpoint(md) {
+        padding: 0;
+        // padding:0 15px;
+        // margin: 20px 0 0
+      }
+    }
+
+    &_current {
+      cursor: pointer;
+      position: relative;
+      z-index: 850;
+      display: inline-block;
+      width: 100%;
+      min-width: 150px;
+      padding: 0 15px 0 20px;
+      text-align: left;
+      text-transform: lowercase;
+      color: color(colored, blue);
+
+      @include breakpoint(md) {
+        padding: 0 0 0 10px;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: -10px;
+        top: calc(50% - 3.75px);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 7.5px 0 7.5px;
+        border-color: color(colored, blue) transparent transparent transparent;
+
+          @include breakpoint(md) {
+            right: 10px;
+          }
+      }
+    }
+
+    &_drop {
+      position: absolute;
+      z-index: 800;
+      top: -10px;
+      left: 10px;
+      display: none;
+      width: 100%;
+      padding: 40px 0 0;
+      background: color(neutral, base);
+      font-size: size(small);
+      font-weight: normal;
+      box-shadow: 0.5px 0.9px 9px 0 rgba(0, 0, 0, 0.11);
+
+      @include breakpoint(md) {
+        left: 0;
+        right: 0
+      }
+    }
+
+    &_drop-item {
+      text-align: left;
+      text-transform: lowercase;
+      background: color(neutral, base);;
+      @include transition(300ms, ease);
+
+        &:hover a {
+          display: block;
+          height: 100%;
+          color: color(primary, base)
+        }
+
+        &:hover {
+          background: white;
+        }
+    }
+
+    &_drop-item a {
+      display: block;
+      padding: 5px 10px;
+      color: color(neutral, darkest)
+    }
+}
+
+/* ---------------------
+ SUBCATEGORIES
+---------------------- */
+
+.subcategories-filter {
+
+    &_list {
+      margin: $gutter auto;
+      text-align: center;
+    }
+
+    &_item {
+      @extend .children-categories_item;
+      margin: 5px 5px;
+
+        &.--current {
+          background: color(primary, dark)
+        }
+    }
+}

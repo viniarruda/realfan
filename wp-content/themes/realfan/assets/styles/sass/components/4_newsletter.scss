@@ -1,0 +1,56 @@
+.newsletter {
+  margin: $gutter auto;
+  text-align: center;
+
+    p {
+      width: 100%;
+    }
+
+    &_title {
+      color: color(primary, dark);
+      font-size: size(big)
+    }
+
+    .mc4wp-form-fields,
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 50%;
+
+      @include breakpoint(lg) {
+        max-width: inherit;
+        width: 80%;
+      }
+    }
+
+    .mc4wp-form-fields {
+      width: 100%;
+      max-width: 100%
+    }
+
+    input[type="email"] {
+      flex-basis: 77%;
+
+      @include breakpoint(lg) {
+        flex-basis: 100%
+      }
+    }
+
+    .wpcf7-not-valid {
+      border: 1px solid color(colored, red)
+    }
+
+    input[type="submit"] {
+      flex-basis: 20%;
+      margin: 0 0 0 3%;
+
+      @include breakpoint(lg) {
+        flex-basis: 100%;
+        margin: 3% 0 0 0
+      }
+    }
+
+    .wpcf7-not-valid-tip {
+      display: none
+    }
+}

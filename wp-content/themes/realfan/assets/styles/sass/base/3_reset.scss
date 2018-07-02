@@ -1,0 +1,83 @@
+* {
+	margin:0 auto;
+	padding:0;
+	vertical-align:baseline;
+	outline:none;
+	text-decoration:none;
+	box-sizing:border-box;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+a {
+	text-decoration:none;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+img, object, video {
+	max-width:100%;
+	height:auto;
+}
+
+iframe {
+	max-width:100%;
+}
+
+img {
+	vertical-align:middle;
+}
+
+object[type="application/gas-events-abn"] {
+	display:none !important;
+}
+
+button,
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+     -webkit-appearance: none;
+     border-radius: 0;
+		 border: none;
+		 background: none
+}
+
+strong, b {
+	font-weight:bold;
+}
+
+i, em {
+	font-style:italic
+}
+
+u {
+	text-decoration:underline
+}
+
+p {
+	display:block;
+	margin:1em 0
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+em {color: #000; font-style: italic;} i {color: #000;}
+b {color: #000;} strong {color: #000}
+
+.center, .aligncenter {display: block; margin-left: auto; margin-right: auto; text-align: center;}
+.left, .alignleft {float: left; margin-right:2%; }
+.right, .alignright {float: right; margin-left:2%;}
+.alignnone {display: block; margin-left: -20px;}
+
+.wp-caption {position: relative; max-width:100%}
+.wp-caption-text {margin: 0 3% 0 0; padding: 3px 10px; position: absolute; left: 10px; bottom: 10px; background: rgba(0, 0, 0, .7); color: #fff; text-align: left; font: 12px Arial, serif; font-style: italic;}

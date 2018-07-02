@@ -1,0 +1,30 @@
+.btn {
+  padding:5px 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: white;
+  font-size: size(small);
+  font-weight: 900;
+
+    &.--primary {
+      background: color(colored, blue);
+      border: 2px solid color(colored, blue);
+
+        &:hover {
+          background: color(colored, blue-hover);
+          border-color: color(colored, blue-hover)
+        }
+    }
+
+    &.--secondary {
+      color: color(colored, blue);
+      font-size: size(smaller);
+      background: transparent;
+      border: 2px solid color(colored, blue);
+
+        &:hover {
+          color: white;
+          background: color(colored, blue)
+        }
+    }
+}

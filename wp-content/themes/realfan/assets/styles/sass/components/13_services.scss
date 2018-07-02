@@ -1,0 +1,96 @@
+.services {
+  padding: 40px 0;
+  text-align: center;
+
+  &_title {
+    text-transform: uppercase;
+  }
+
+  &_list {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  &_card {
+    flex: 1;
+    margin: 40px 15px;
+    cursor: pointer;
+    box-shadow: 0 10px 12px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 1000;
+    width: 100px;
+    height: 300px;
+    -webkit-transition: -webkit-transform 0.6s;
+    -moz-transition: -moz-transform 0.6s;
+    -o-transition: -o-transform 0.6s;
+    transition: transform 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    &.--flipped {
+      -webkit-transform: rotateY( 180deg );
+      -moz-transform: rotateY( 180deg );
+      -o-transform: rotateY( 180deg );
+      transform: rotateY( 180deg );
+    }
+    &-front,
+    &-back {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      line-height: 60px;
+      color: white;
+      text-align: center;
+      font-size: 4em;
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -o-backface-visibility: hidden;
+      backface-visibility: hidden;
+      align-items: center;
+    }
+    &-back {
+      background: #03446A;
+      -webkit-transform: rotateY( 180deg );
+      -moz-transform: rotateY( 180deg );
+      -o-transform: rotateY( 180deg );
+      transform: rotateY( 180deg );
+    }
+  }
+}
+
+@-webkit-keyframes front_spinner {
+  from { -webkit-transform: rotateY(0deg);    }
+  to   { -webkit-transform: rotateY(-360deg); }
+}
+/* all other browsers */
+@keyframes front_spinner {
+  from {
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -moz-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    transform: rotateY(-360deg);
+  }
+}
+
+@-webkit-keyframes back_spinner {
+  from { -webkit-transform: rotateY(0deg);    }
+  to   { -webkit-transform: rotateY(-180deg); }
+}
+/* all other browsers */
+@keyframes back_spinner {
+  from {
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+}

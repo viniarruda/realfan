@@ -1,0 +1,47 @@
+/* ---------------------
+  GRID
+---------------------- */
+
+.container {
+	max-width:1050px;
+	width:90%;
+	margin:0 auto;
+	position:relative;
+
+	@include clearfix;
+}
+
+.columns {
+	width:100% + $grid-gutter;
+	margin-left: - ($grid-gutter / 2);
+
+	@include clearfix;
+
+		&--no-margin {
+			width:100%;
+			margin:0 auto;
+		}
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    width: (100% / $grid-columns * $i) - $grid-gutter;
+		margin:0 ($grid-gutter / 2) $grid-gutter;
+  }
+
+	.col-#{$i}--noMargin {
+		width:100% / $grid-columns * $i;
+		margin:0 auto $grid-gutter !important
+	}
+}
+
+[class*="col-"] {
+	position:relative;
+  float: left;
+	min-height:1px;
+
+    @include breakpoint(md) {
+      width:100% !important;
+			margin:0 auto 30px;
+    }
+}
