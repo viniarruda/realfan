@@ -29,7 +29,7 @@ define('DB_USER', 'realfanadmin');
 define('DB_PASSWORD', 'Oshirofamily1@');
 
 /** Nome do host do MySQL */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'realfanwp.mysql.uhserver.com');
 
 /** Charset do banco de dados a ser usado na criação das tabelas. */
 define('DB_CHARSET', 'utf8');
