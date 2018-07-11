@@ -49,11 +49,11 @@
       @include breakpoint(md) {
         margin: 0;
         border-radius: 0;
-        background: url('../images/icon-search.png') center right no-repeat #2a4c44;
+        background: url('../images/icon-search.png') center right no-repeat #00557A;
         background-position-x: 95%;
-
+        color: #fff;
           @include placeholder {
-            color: white;
+            color: #fff;
           }
       }
     }

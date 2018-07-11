@@ -9,7 +9,15 @@ $('.header_toggle').click(function() {
   $(this).toggleClass('--active');
 });
 
-
+$(function(){
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 120) {
+            $('.header').addClass('skin');
+        } else {
+            $('.header').removeClass('skin');
+        }
+    });
+});
 //MATCH HEIGHT
 $('.post-card').matchHeight();
 

@@ -1,7 +1,6 @@
 .footer {
   clear: both;
   position: relative;
-  margin:120px 0 0;
   padding: 50px 15px;
   background: color(neutral, darkest);
   text-transform: uppercase;
@@ -46,6 +45,14 @@
           background: white;
         }
 
+        &:first-child {
+          a {
+            font-weight: bold;
+            .footer_blue {
+              color: color(primary, base);
+            }
+          }
+        }
         &:last-child {
           &:after {display: none}
         }

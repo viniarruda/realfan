@@ -4,6 +4,7 @@
   <div class="posts">
     <div class="posts_content container">
       <div class="columns">
+          <h1>Conheça as novidades da RealFan</h1>
         <?php
             $args = array(
               'posts_per_page' => 9,

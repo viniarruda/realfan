@@ -526,8 +526,20 @@ blockquote {
   text-transform: uppercase;
   font-size: size(small);
   font-weight: 300;
-  position: absolute;
+  position: fixed;
 
+  @include breakpoint(md) {
+    background: #00557A;
+  }
+
+  &.skin {
+    background: #00557A;
+    .header_links-item {
+      a {
+        color: white;
+      }
+    }
+  }
     &_progress {
       position: absolute;
       top: 0;
@@ -577,11 +589,11 @@ blockquote {
         width: 100%;
         max-width: inherit;
         position: absolute;
-        top: 70px;
+        top: 68px;
         display: none;
         flex-wrap: wrap;
         flex-basis: 100%;
-        background: color(primary, dark);
+        background: #00557A;
         padding:15px 0 0;
 
           > * {flex-basis: 100%}
@@ -593,7 +605,7 @@ blockquote {
       }
 
       &.--search-active {
-        max-width: 600px;
+        //max-width: 600px;
       }
     }
 
@@ -603,12 +615,16 @@ blockquote {
       text-align: center;
 
        img {
-         width: 100px
+         width: 100px;
+         @include breakpoint(md) {
+           width: 60px;
+         }
        }
 
        @include breakpoint(md) {
          flex-basis: 50%;
-         padding-left: $gutter/2
+         padding-left: $gutter/2;
+         text-align: left;
        }
     }
 
@@ -665,11 +681,23 @@ blockquote {
         height: 40px;
         line-height: 40px;
       }
+
+      a {
+        color: color(primary, base);
+        font-weight: bold;
+        @include breakpoint(md) {
+          color: color(primary, lighten);
+        }
+      }
+
     }
 
     a {
       color: color(primary, base);
       font-weight: bold;
+      @include breakpoint(md) {
+        color: color(primary, lighten);
+      }
     }
 
 }
@@ -683,7 +711,8 @@ blockquote {
   align-items: center;
 
     @include breakpoint(md) {
-      flex-basis: 50% !important
+      flex-basis: 50% !important;
+      padding: 30px;
     }
 
     &_item {
@@ -694,7 +723,6 @@ blockquote {
 .footer {
   clear: both;
   position: relative;
-  margin:120px 0 0;
   padding: 50px 15px;
   background: color(neutral, darkest);
   text-transform: uppercase;
@@ -739,6 +767,14 @@ blockquote {
           background: white;
         }
 
+        &:first-child {
+          a {
+            font-weight: bold;
+            .footer_blue {
+              color: color(primary, base);
+            }
+          }
+        }
         &:last-child {
           &:after {display: none}
         }
@@ -774,17 +810,73 @@ blockquote {
 }
 
 .about {
-  padding: 40px 0;
+  padding: 100px 0;
   text-align: center;
 
   &_title {
     text-transform: uppercase;
   }
+  &-card {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    background: color(primary, lighter);
+    box-shadow: 0.8px 1.3px 20px 0 rgba(0, 0, 0, 0.15);
+    margin: 30px auto 0;
+
+    &:hover &_thumb span {
+      transform: scale(1.1)
+    }
+
+    &_thumb {
+      overflow: hidden;
+      position: relative;
+      height: 300px;
+      @include border-radius(20px, 20px, 0, 0);
+
+      span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        @include border-radius(20px, 20px, 0, 0);
+        background-size: cover;
+        background-position: center;
+        @include transition(300ms, ease);
+      }
+    }
+    &_content {
+      padding: 20px
+    }
+    &_title {
+      font-size: size(big);
+      line-height: size(big)
+    }
+    &_excerpt {
+
+    }
+  }
+  p {
+    color: #000;
+    font-size: 30px;
+    line-height: 1.2;
+    @include breakpoint(md) {
+      font-size: 20px;
+    }
+  }
 }
 .services {
-  padding: 40px 0;
+  padding: 100px 0;
   text-align: center;
+  background-position: center;
+  background-size: cover;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../images/pexels-photo-373543.jpg');
+  background-repeat: no-repeat;
 
+  @include breakpoint(md) {
+    background-repeat: repeat;
+  }
   &_title {
     text-transform: uppercase;
   }
@@ -798,10 +890,11 @@ blockquote {
     margin: 40px 15px;
     cursor: pointer;
     box-shadow: 0 10px 12px rgba(0,0,0,0.2);
+    border-radius: 10px;
     position: relative;
-    z-index: 1000;
-    width: 100px;
-    height: 300px;
+    z-index: 10;
+    min-width: 300px;
+    height: 400px;
     -webkit-transition: -webkit-transform 0.6s;
     -moz-transition: -moz-transform 0.6s;
     -o-transition: -o-transform 0.6s;
@@ -831,65 +924,94 @@ blockquote {
       -o-backface-visibility: hidden;
       backface-visibility: hidden;
       align-items: center;
+      border-radius: 10px;
+    }
+    &-front {
+      flex-flow: column;
+      justify-content: center;
+      background-color: white;
+      padding: 0 15px;
+      h2 {
+        font-size: 30px;
+        line-height: 1.1;
+        margin-top: 10px;
+        text-transform: uppercase;
+        color: white;
+      }
+      i {
+        color: white;
+        margin-bottom: 10px;
+      }
+      &.site {
+        background: #2aa9e0;
+      }
+      &.social{
+        background: #f39c12;
+      }
+      &.marketing {
+        background: #27ae60;
+      }
+      &.channels {
+        background: #AD103C;
+      }
+      &.advisory {
+        background: #814fbd;
+      }
+      &.sales {
+        background: #ef03fc;
+      }
     }
     &-back {
-      background: #03446A;
+      background-color: #03446A;
+      width: 100%;
       -webkit-transform: rotateY( 180deg );
       -moz-transform: rotateY( 180deg );
       -o-transform: rotateY( 180deg );
       transform: rotateY( 180deg );
+      font-size: 20px;
+      line-height: 1.2;
+      padding: 10px 30px;
+      text-align: left;
+      justify-content: center;
+      span {
+        font-weight: bold;
+      }
+      &.site {
+        background: #2aa9e0;
+      }
+      &.social{
+        background: #f39c12;
+      }
+      &.marketing {
+        background: #27ae60;
+      }
+      &.channels {
+        background: #AD103C;
+      }
+      &.advisory {
+        background: #814fbd;
+      }
+      &.sales {
+        background: #ef03fc;
+      }
     }
   }
 }
-
-@-webkit-keyframes front_spinner {
-  from { -webkit-transform: rotateY(0deg);    }
-  to   { -webkit-transform: rotateY(-360deg); }
-}
-/* all other browsers */
-@keyframes front_spinner {
-  from {
-    -moz-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-  to {
-    -moz-transform: rotateY(-360deg);
-    -ms-transform: rotateY(-360deg);
-    transform: rotateY(-360deg);
-  }
-}
-
-@-webkit-keyframes back_spinner {
-  from { -webkit-transform: rotateY(0deg);    }
-  to   { -webkit-transform: rotateY(-180deg); }
-}
-/* all other browsers */
-@keyframes back_spinner {
-  from {
-    -moz-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-  to {
-    -moz-transform: rotateY(-180deg);
-    -ms-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
-  }
-}
 .blog {
-  padding: 40px;
+  padding: 100px 40px;
   text-align: center;
   overflow: hidden;
+  background: #e6e6e6;
   &_title {
     text-transform: uppercase;
   }
   &-list {
     margin: 40px 0;
+    overflow: hidden;
   }
   .view-more {
     border: 1px solid color(primary, base);
-    color: color(primary, base);
+    color: color(primary, base );
     border-radius: 50px;
     float: right;
     padding: 10px 15px;
@@ -903,11 +1025,95 @@ blockquote {
   }
 }
 .contact {
-  padding: 40px 0;
+  padding: 100px 0;
   text-align: center;
+  background-position: center;
+  background-size: cover;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../images/calling-cellphone-communication.jpg') no-repeat;
 
   &_title {
     text-transform: uppercase;
+  }
+  form {
+    p {
+      label {
+        color: white;
+        input {
+          background: transparent;
+          border: 1px solid white;
+          color: white;
+          @include placeholder {
+            color: #fff;
+          }
+        }
+        textarea {
+          background: transparent;
+          border: 1px solid white;
+          color: white;
+        }
+        .wpcf7-mail-sent-ok {
+          border: none!important;
+          color: white!important;
+        }
+      }
+    }
+  }
+}
+.cases {
+  padding: 100px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  background-color: white;
+  &_title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  &_video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    a {
+      margin: 15px;
+      img {
+        filter: grayscale(100%);
+        width: 100px;
+        &:hover {
+          filter: grayscale(0%);
+        }
+      }
+    }
+  }
+  &_item {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 15px;
+    a {
+      flex: 1;
+      margin: 15px;
+
+      @include breakpoint(md) {
+        min-width: 25%;
+      }
+      img {
+        filter: grayscale(100%);
+        width: 100px;
+        &:hover {
+          filter: grayscale(0%);
+        }
+        @include breakpoint(md) {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 .featured-post {
@@ -915,26 +1121,48 @@ blockquote {
   width: 100%;
   background-position: center;
   background-size: cover;
-  background: url('../images/main-banner.png') no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../images/black-coffee-business.jpg') no-repeat;
   height: 600px;
   padding-top: 80px;
   text-align: center;
-
-    @include breakpoint(md) {
-      margin: 70px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    h1 {
+      font-size: 60px;
+      margin-bottom: 30px;
+      border: 2px solid #0098da;
+      overflow: hidden;
+      padding: 35px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      span {
+        color: white;
+      }
+    }
+    h2 {
+      color: white;
+    }
+    p {
+      color: color(neutral, base);
     }
 
-    &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: color(primary, light);
-      opacity: .72
-    }
+    //@include breakpoint(md) {
+    //  margin: 70px 0 0;
+    //}
+
+    //&:before {
+    //  content: "";
+    //  display: block;
+    //  position: absolute;
+    //  top: 0;
+    //  left: 0;
+    //  width: 100%;
+    //  height: 100%;
+    //  background: color(primary, light);
+    //  opacity: .72
+    //}
 
     &_content {
       display: flex;
@@ -1457,11 +1685,11 @@ blockquote {
       @include breakpoint(md) {
         margin: 0;
         border-radius: 0;
-        background: url('../images/icon-search.png') center right no-repeat #2a4c44;
+        background: url('../images/icon-search.png') center right no-repeat #00557A;
         background-position-x: 95%;
-
+        color: #fff;
           @include placeholder {
-            color: white;
+            color: #fff;
           }
       }
     }
@@ -1616,4 +1844,18 @@ blockquote {
     &_title {
       margin: 0 0 20px
     }
+}
+
+.archive-page {
+  margin: 120px 0 0;
+  .posts {
+    margin-bottom: 130px;
+
+    h1 {
+      text-align: center;
+      font-size: 50px;
+      margin: 60px 0;
+      line-height: 0.9;
+    }
+  }
 }

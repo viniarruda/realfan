@@ -8,6 +8,24 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/styles/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
+    <link rel="apple-touch-icon" sizes="57x57" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="<?php bloginfo('template_url'); ?>/assets/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="<?php bloginfo('template_url'); ?>/assets/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
 
       <!-- Facebook Share -->
     <?php if(is_single() || is_page()) { ?>
@@ -21,7 +39,7 @@
     <meta property="og:title" content="<?php bloginfo('name'); ?>" />
     <meta property="og:url" content="<?php bloginfo('url'); ?>"/>
     <meta property="og:description" content="<?php bloginfo('description'); ?>" />
-    <meta property="og:image" content="<?php bloginfo('template_url'); ?>/assets/images/facebook-share.png" />
+    <meta property="og:image" content="<?php bloginfo('template_url'); ?>/assets/images/realfan_blue.png" />
     <meta property="og:site_name" content="<?php wp_title( '|', true, 'right' ); ?> <?php bloginfo('name'); ?>">
     <meta property="og:locale" content="pt_BR">
     <?php  }  ?>
@@ -43,7 +61,7 @@
       <?php endif; ?>
       <div class="header_content">
         <div class="header_logo">
-          <a href="https://realfancomunicacao.com.br">
+          <a href="http://realfancomunicacao.com.br">
             <img src="<?php bloginfo('template_url'); ?>/assets/images/realfan_headerlogo.png" alt="RealFan">
           </a>
         </div>
@@ -56,6 +74,7 @@
               <li class="header_links-item"><a href="<?php bloginfo('siteurl'); ?>/">Início</a></li>
               <li class="header_links-item"><a href="#about">Sobre</a></li>
               <li class="header_links-item"><a href="#services">O que fazemos</a></li>
+              <li class="header_links-item"><a href="#cases">Cases</a></li>
               <li class="header_links-item"><a href="<?php bloginfo('siteurl'); ?>/blog">Blog</a></li>
               <li class="header_links-item"><a href="#contact">Contato</a></li>
             </ul>
@@ -74,13 +93,13 @@
             </li>
           </ul>
 
-          <div class="search">
-            <?php get_search_form(); ?>
-
-            <span class="search_toggle">
-              <img src="<?php bloginfo('template_url'); ?>/assets/images/icon-search.png" alt="Pesquisa">
-            </span>
-          </div>
+<!--          <div class="search">-->
+<!--            --><?php //get_search_form(); ?>
+<!---->
+<!--            <span class="search_toggle">-->
+<!--              <img src="--><?php //bloginfo('template_url'); ?><!--/assets/images/icon-search.png" alt="Pesquisa">-->
+<!--            </span>-->
+<!--          </div>-->
 
         </div>
 

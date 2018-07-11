@@ -10763,7 +10763,7 @@ $('.header_toggle').click(function() {
   $(this).toggleClass('--active');
 });
 
-
+$(function)
 //MATCH HEIGHT
 $('.post-card').matchHeight();
 

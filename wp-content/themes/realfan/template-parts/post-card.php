@@ -22,6 +22,7 @@
     <div class="post-card_content">
       <span class="post-card_date"><?php the_date(); ?></span>
       <h2 class="post-card_title"><?php the_title(); ?></h2>
+      <p><?php the_excerpt(100); ?></p>
       <a href="<?php the_permalink(); ?>" class="btn --secondary">Leia Mais</a>
     </div>
   </article>

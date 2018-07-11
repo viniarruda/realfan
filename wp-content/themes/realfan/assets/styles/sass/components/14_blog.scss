@@ -1,12 +1,14 @@
 .blog {
-  padding: 40px;
+  padding: 100px 40px;
   text-align: center;
   overflow: hidden;
+  background: #e6e6e6;
   &_title {
     text-transform: uppercase;
   }
   &-list {
     margin: 40px 0;
+    overflow: hidden;
   }
   .view-more {
     border: 1px solid color(primary, base);

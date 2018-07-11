@@ -1,8 +1,57 @@
 .about {
-  padding: 40px 0;
+  padding: 100px 0;
   text-align: center;
 
   &_title {
     text-transform: uppercase;
+  }
+  &-card {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    background: color(primary, lighter);
+    box-shadow: 0.8px 1.3px 20px 0 rgba(0, 0, 0, 0.15);
+    margin: 30px auto 0;
+
+    &:hover &_thumb span {
+      transform: scale(1.1)
+    }
+
+    &_thumb {
+      overflow: hidden;
+      position: relative;
+      height: 300px;
+      @include border-radius(20px, 20px, 0, 0);
+
+      span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        @include border-radius(20px, 20px, 0, 0);
+        background-size: cover;
+        background-position: center;
+        @include transition(300ms, ease);
+      }
+    }
+    &_content {
+      padding: 20px
+    }
+    &_title {
+      font-size: size(big);
+      line-height: size(big)
+    }
+    &_excerpt {
+
+    }
+  }
+  p {
+    color: #000;
+    font-size: 30px;
+    line-height: 1.2;
+    @include breakpoint(md) {
+      font-size: 20px;
+    }
   }
 }
