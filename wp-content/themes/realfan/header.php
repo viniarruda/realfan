@@ -83,12 +83,12 @@
           <ul class="social-links">
             <li class="social-links_item">
               <a href="#" target="_blank">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/icon-facebook.png" alt="Facebook">
+                  <i class="fab fa-facebook-f"></i>
               </a>
             </li>
             <li class="social-links_item">
               <a href="#" target="_blank">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/icon-instagram.png" alt="Instagram">
+                  <i class="fab fa-instagram"></i>
               </a>
             </li>
           </ul>

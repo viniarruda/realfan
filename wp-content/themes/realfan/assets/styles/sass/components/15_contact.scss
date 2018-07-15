@@ -3,31 +3,37 @@
   text-align: center;
   background-position: center;
   background-size: cover;
-  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../images/calling-cellphone-communication.jpg') no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../images/contact_bg.png');
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &_title {
     text-transform: uppercase;
   }
-  form {
-    p {
-      label {
-        color: white;
-        input {
-          background: transparent;
-          border: 1px solid white;
+  .container_contact {
+    max-width: 800px;
+    form {
+      p {
+        label {
           color: white;
-          @include placeholder {
-            color: #fff;
+          input {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            @include placeholder {
+              color: #fff;
+            }
           }
-        }
-        textarea {
-          background: transparent;
-          border: 1px solid white;
-          color: white;
-        }
-        .wpcf7-mail-sent-ok {
-          border: none!important;
-          color: white!important;
+          textarea {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+          }
+          div.wpcf7-mail-sent-ok {
+            border: none!important;
+            color: white!important;
+          }
         }
       }
     }

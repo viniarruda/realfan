@@ -11,6 +11,7 @@
         <a href="#" class="scroll-top">
           <span class="footer_blue">Real</span>Fan
         </a>
+        <span class="footer_contact">CONTATOS</span>
       </div>
 
       <div class="footer_widget">
@@ -18,17 +19,12 @@
       </div>
 
       <div class="footer_widget">
-        <a href="mailto:julioconsultorias@gmail.com">julioconsultorias@gmail.com</a>
+        <a href="mailto:julioconsultorias@gmail.com">julio@realfancomunicacao.com.br</a>
+
       </div>
 
       <div class="footer_widget">
-        <a class="social-link" href="#" target="_blank">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/icon-facebook.png" alt="Facebook">
-        </a>
-
-        <a class="social-link" href="#" target="_blank">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/icon-instagram.png" alt="Instagram">
-        </a>
+          <span class="footer_phone">São Paulo- SP | <i class="fab fa-whatsapp"></i> +55 11 99757-5711</span>
       </div>
 
     </div>

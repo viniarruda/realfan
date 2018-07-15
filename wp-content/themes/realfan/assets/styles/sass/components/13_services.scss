@@ -64,15 +64,86 @@
       background-color: white;
       padding: 0 15px;
       h2 {
-        font-size: 30px;
+        font-size: 29px;
         line-height: 1.1;
         margin-top: 10px;
         text-transform: uppercase;
         color: white;
       }
+      p {
+        font-size: 24px;
+        color: white;
+        line-height: 1.1;
+        margin-top: 10px;
+      }
       i {
         color: white;
         margin-bottom: 10px;
+      }
+      img {
+        width: 75px;
+      }
+      .jump {
+        font-size: 24px;
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        -webkit-animation: jump 1.5s ease 0s infinite normal;
+        animation: jump 1.5s ease 0s infinite normal;
+      }
+      @-webkit-keyframes jump {
+        0%{
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+        20%{
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+        40%{
+          -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+        }
+        50%{
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+        60%{
+          -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+        }
+        80%{
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+        100%{
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes jump {
+        0%{
+          transform: translateY(0);
+        }
+        20%{
+          transform: translateY(0);
+        }
+        40%{
+          transform: translateY(-30px);
+        }
+        50%{
+          transform: translateY(0);
+        }
+        60%{
+          transform: translateY(-15px);
+        }
+        80%{
+          transform: translateY(0);
+        }
+        100%{
+          transform: translateY(0);
+        }
       }
       &.site {
         background: #2aa9e0;

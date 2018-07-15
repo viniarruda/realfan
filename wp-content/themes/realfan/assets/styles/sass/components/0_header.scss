@@ -20,6 +20,16 @@
         color: white;
       }
     }
+    .social-links {
+      &_item {
+        a {
+          color: white;
+          i {
+            color: white;
+          }
+        }
+      }
+    }
   }
     &_progress {
       position: absolute;
@@ -190,6 +200,7 @@
 .social-links {
   display: flex;
   align-items: center;
+  padding-top: 5px;
 
     @include breakpoint(md) {
       flex-basis: 50% !important;
@@ -197,6 +208,15 @@
     }
 
     &_item {
-      padding: 0 20px
+      padding: 0 20px;
+      a {
+        i {
+          color: color(primary, base);
+          font-size: 20px;
+          @include breakpoint(md) {
+            color: color(primary, lighten);
+          }
+        }
+      }
     }
 }

@@ -40,6 +40,9 @@
       margin: 15px;
 
       @include breakpoint(md) {
+        min-width: 30%;
+      }
+      @include breakpoint(sm) {
         min-width: 25%;
       }
       img {

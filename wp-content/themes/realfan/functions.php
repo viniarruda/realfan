@@ -134,4 +134,10 @@ function new_custom_login_page_style() {
     </style>';}
 add_action('login_head', 'new_custom_login_page_style');
 
+add_filter( 'wp_image_editors', 'change_graphic_lib' );
+
+function change_graphic_lib($array) {
+  return array( 'WP_Image_Editor_GD', 'WP_Image_Editor_Imagick' );
+}
+
 ?>
