@@ -1,7 +1,9 @@
 <article class="post">
     <div class="post_head">
       <?php if(is_single()) : ?>
-        <?php get_template_part( 'template-parts/share');?>
+      <span class="featured-post_time"><?php the_date(); ?></span>
+
+      <h1 class="featured-post_title"><?php the_title(); ?></h1>
       <?php endif; ?>
     </div>
 

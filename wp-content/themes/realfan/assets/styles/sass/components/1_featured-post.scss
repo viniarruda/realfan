@@ -99,7 +99,8 @@
       color: white;
 
       @include breakpoint(md) {
-        max-width: inherit
+        max-width: inherit;
+        height: 115px;
       }
     }
 
@@ -118,7 +119,8 @@
     &_time {
       display: block;
       margin: 0 0 15px 0;
-      font-size: size(small)
+      font-size: size(small);
+      opacity: .6;
     }
 
     &_author {

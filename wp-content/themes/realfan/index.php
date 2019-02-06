@@ -55,7 +55,7 @@
                         </div>
                         <h2>Suas Redes Sociais</h2>
                         <p>Interação Qualificada</p>
-                        <i class="fas fa-hand-point-down jump"></i>
+                        <span>Clique aqui e saiba mais</span>
                     </div>
                     <div class="services_card-back social">
                         Você ainda duvida que a sua marca, produto ou serviço precisam estar nas
@@ -68,7 +68,7 @@
                         <i class="fas fa-tv"></i>
                         <h2>Outros Canais</h2>
                         <p>Divulgação Adaptada</p>
-                        <i class="fas fa-hand-point-down jump"></i>
+                        <span>Clique aqui e saiba mais</span>
                     </div>
                     <div class="services_card-back channels">
                         Há sempre uma forma de aparecer mais. Nosso Planejamento de Mídia vai
@@ -81,7 +81,7 @@
                     <div class="services_card-front sales">
                         <i class="fas fa-people-carry"></i>
                         <h2>Treinamento e Consultoria de Vendas</h2>
-                        <i class="fas fa-hand-point-down jump"></i>
+                        <span>Clique aqui e saiba mais</span>
                     </div>
                     <div class="services_card-back sales">O que significa "Transformar sua Equipe de Vendas"? Como simples
                         treinamentos e implementação de metodologias podem melhorar seus
@@ -92,7 +92,7 @@
                     <div class="services_card-front marketing">
                         <i class="far fa-edit"></i>
                         <h2>MARKETING DE CONTEÚDO</h2>
-                        <i class="fas fa-hand-point-down jump"></i>
+                        <span>Clique aqui e saiba mais</span>
                     </div>
                     <div class="services_card-back marketing">
                         Não há Marketing sem conteúdo. Não há encantamento sem conteúdo. Para formar e

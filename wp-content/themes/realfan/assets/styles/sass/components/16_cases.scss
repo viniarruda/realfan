@@ -53,6 +53,7 @@
         }
         @include breakpoint(md) {
           width: 100%;
+          filter: grayscale(0%);
         }
       }
     }

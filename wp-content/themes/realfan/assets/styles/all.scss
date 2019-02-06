@@ -841,7 +841,7 @@ blockquote {
     a {
       color: white;
 
-      &:hover {opacity: .6}
+      &:hover {opacity: .1}
     }
 
     .social-link {
@@ -987,6 +987,10 @@ blockquote {
       i {
         color: white;
         margin-bottom: 10px;
+      }
+      span {
+        text-decoration: underline;
+        color: white;
       }
       img {
         width: 75px;
@@ -1231,6 +1235,7 @@ blockquote {
         }
         @include breakpoint(md) {
           width: 100%;
+          filter: grayscale(0%);
         }
       }
     }
@@ -1337,7 +1342,8 @@ blockquote {
       color: white;
 
       @include breakpoint(md) {
-        max-width: inherit
+        max-width: inherit;
+        height: 115px;
       }
     }
 
@@ -1356,7 +1362,8 @@ blockquote {
     &_time {
       display: block;
       margin: 0 0 15px 0;
-      font-size: size(small)
+      font-size: size(small);
+      opacity: .6;
     }
 
     &_author {
@@ -1587,7 +1594,7 @@ blockquote {
     }
 
     &_title {
-      color: color(primary, dark);
+      color: color(colored, blue);
       font-size: size(big);
       line-height: size(big)
     }
