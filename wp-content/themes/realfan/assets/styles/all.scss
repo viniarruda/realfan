@@ -991,6 +991,10 @@ blockquote {
       span {
         text-decoration: underline;
         color: white;
+        font-size: 16px;
+        position: absolute;
+        bottom: 0;
+        right: 15px;
       }
       img {
         width: 75px;
@@ -1275,7 +1279,8 @@ blockquote {
       height: 600px;
     }
     @include breakpoint(sm) {
-      height: auto;
+      height: 245px;
+      margin-top: 45px;
     }
     h1 {
       font-size: 60px;
@@ -1356,7 +1361,7 @@ blockquote {
     &_title {
       font-size: size(bigger);
       line-height: size(bigger);
-      color: white;
+      color: color(colored, blue);
     }
 
     &_time {
@@ -1364,6 +1369,7 @@ blockquote {
       margin: 0 0 15px 0;
       font-size: size(small);
       opacity: .6;
+      width: 100%;
     }
 
     &_author {

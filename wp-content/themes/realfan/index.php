@@ -38,7 +38,7 @@
                         <img src="<?php bloginfo('template_url'); ?>/assets/images/note_mobile.png" alt="Seu Site" />
                         <h2>Seu endereço web</h2>
                         <p>Portal, e-commerce e mais...</p>
-                        <i class="fas fa-hand-point-down jump"></i>
+                        <span>Clique aqui e saiba mais</span>
                     </div>
                     <div class="services_card-back site">
                         Se você ainda não tem seu endereço na Internet, isso é passado. Se você já
@@ -105,7 +105,7 @@
                     <div class="services_card-front advisory">
                         <i class="fas fa-microphone"></i>
                         <h2>ASSESSORIA DE IMPRENSA</h2>
-                        <i class="fas fa-hand-point-down jump"></i>
+                        <span>Clique aqui e saiba mais</span>
                     </div>
                     <div class="services_card-back advisory">Entre sua marca, seu produto ou serviço está nossa intermediação junto aos principais meios de comunicação. Isso é Visibilidade Real!</div>
             </div>
